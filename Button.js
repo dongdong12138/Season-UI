@@ -1,5 +1,5 @@
 Vue.component('s-button', {
   template: `
-    <button>按钮</button>
+    <button class="s-button">按钮</button>
   `
 })
