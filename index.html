@@ -26,6 +26,11 @@
     <s-button icon="settings" :loading="loading2" @click="loading2 = !loading2">按钮2</s-button>
     <s-button icon="settings" icon-position="left" :loading="loading3" @click="loading3 = !loading3">按钮3</s-button>
     <s-button icon="settings" icon-position="right" :loading="loading4" @click="loading4 = !loading4">按钮4</s-button>
+    <s-button-group>
+      <s-button icon="left">上一页</s-button>
+      <s-button>更多</s-button>
+      <s-button icon="right" icon-position="right">下一页</s-button>
+    </s-button-group>
   </div>
 
   <script src="./src/app.js"></script>
