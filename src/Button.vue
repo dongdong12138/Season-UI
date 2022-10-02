@@ -1,6 +1,7 @@
 <template>
-  <button :class="['s-button', {[`icon-${iconPosition}`]: icon}]">
-    <s-icon v-if="icon" :name="icon" class="icon"></s-icon>
+  <button :class="['s-button', {[`icon-${iconPosition}`]: icon}]" @click="$emit('click')">
+    <s-icon v-if="icon && !loading" :name="icon" class="icon"></s-icon>
+    <s-icon v-if="loading" name="loading" class="icon"></s-icon>
     <div class="content">
       <slot></slot>
     </div>
@@ -17,7 +18,8 @@ export default {
       validator(value) {
         return ['left', 'right'].includes(value)
       }
-    }
+    },
+    loading: { type: Boolean, default: false }
   }
 }
 </script>
