@@ -14,7 +14,12 @@ export default {
   name: 'Button',
   props: {
     icon: { type: String },
-    iconPosition: { type: String, default: 'left' }
+    iconPosition: {
+      type: String, default: 'left',
+      validator(value) {
+        return ['left', 'right'].includes(value)
+      }
+    }
   }
 }
 </script>
