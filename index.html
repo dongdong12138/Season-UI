@@ -18,18 +18,6 @@
       --border-radius: 4px;
     }
   </style>
-  <style>
-    .s-button {
-      height: var(--button-height);
-      font-size: var(--font-size);
-      background: var(--button-bg);
-      border: 1px solid var(--border-color); border-radius: var(--border-radius);
-      padding: 0 1em;
-    }
-    .s-button:hover { border-color: var(--border-color-hover); }
-    .s-button:active { background: var(--button-bg-active); }
-    .s-button:focus { outline: none; }
-  </style>
 </head>
 <body>
 
@@ -37,13 +25,7 @@
     <s-button></s-button>
   </div>
 
-  <script src="./node_modules/vue/dist/vue.min.js"></script>
-  <script src="./Button.js"></script>
-  <script>
-    new Vue({
-      el: '#app',
-    })
-  </script>
+  <script src="./src/app.js"></script>
 
 </body>
 </html>
